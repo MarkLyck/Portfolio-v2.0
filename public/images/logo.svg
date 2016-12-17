@@ -1,0 +1,32 @@
+<svg width="80" height="80" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-470 142)" figma:type="canvas">
+<g id="Logo" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Rectangle 8" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="translate(470 -142)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 9" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path1_fill" transform="translate(514.923 -87.1908)" fill="#276CC8" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 9" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path2_fill" transform="translate(478.821 -128.756)" fill="#202629" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 9" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path2_fill" transform="translate(496.872 -128.756)" fill="#202629" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 9" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path2_fill" transform="translate(514.923 -128.756)" fill="#2F80ED" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 9" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path3_fill" transform="translate(479 -129)" fill="#202629" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 8C 0 3.58172 3.58172 0 8 0L 72 0C 76.4183 0 80 3.58172 80 8L 80 71.4631C 80 75.8814 76.4183 79.4631 72 79.4631L 8 79.4631C 3.58172 79.4631 0 75.8814 0 71.4631L 0 8Z"/>
+<path id="path1_fill" d="M 0 4C 0 1.79086 1.79086 0 4 0L 22.2564 0C 24.4655 0 26.2564 1.79086 26.2564 4L 26.2564 7.41008C 26.2564 9.61922 24.4655 11.4101 22.2564 11.4101L 4 11.4101C 1.79086 11.4101 0 9.61922 0 7.41008L 0 4Z"/>
+<path id="path2_fill" d="M 0 4C 0 1.79086 1.79086 0 4 0L 9.12821 0C 11.3373 0 13.1282 1.79086 13.1282 4L 13.1282 48.9754C 13.1282 51.1845 11.3373 52.9754 9.12821 52.9754L 4 52.9754C 1.79086 52.9754 0 51.1845 0 48.9754L 0 4Z"/>
+<path id="path3_fill" d="M 0 4C 0 1.79086 1.79086 0 4 0L 45 0C 47.2091 0 49 1.79086 49 4L 49 8C 49 10.2091 47.2091 12 45 12L 4 12C 1.79086 12 0 10.2091 0 8L 0 4Z"/>
+</defs>
+</svg>
