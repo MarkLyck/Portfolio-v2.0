@@ -7,11 +7,12 @@
   color: #fff;
   background: url('../../../public/images/Background.jpg');
   position: relative;
+
   .logo {
     margin-top: 80px;
     margin-bottom: 100px;
   }
-  h1 {
+  h1, span {
     font-size: 56px;
     text-align: center;
   }
@@ -20,6 +21,10 @@
   }
   .thin {
     font-weight: 100;
+  }
+  .typed {
+    display: flex;
+    align-items: center;
   }
   button {
     margin-top: 80px;
@@ -39,4 +44,26 @@
       margin-bottom: 8px;
     }
   }
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
