@@ -23,7 +23,7 @@ export default [
     caseStudy: '/formulastocks',
     github: 'https://github.com/MarkLyck/Formula-Stocks',
     review: {
-      name: 'Thomas Lyck, CEO of Formula Stocks',
+      name: 'Thomas L. CEO of Formula Stocks',
       image: Thomas,
       text: `“Mark’s designs are beautiful, not average and has character.
               I’m proud of the website he put together.”`

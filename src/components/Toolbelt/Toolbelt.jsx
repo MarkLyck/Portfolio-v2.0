@@ -31,7 +31,7 @@ class Toolbelt extends React.Component {
 
   render() {
     const skillWidth = 111
-    let maxSkillsInOneList = Math.floor(((this.state.windowWidth - 110) / skillWidth))
+    let maxSkillsInOneList = Math.floor(((this.state.windowWidth - 160) / skillWidth))
 
     let skillsetItems = skills.map((skill, i) => {
       if (this.state.hoverEffect === i) {
@@ -58,6 +58,8 @@ class Toolbelt extends React.Component {
     let skillLists = []
 
     let numberOfLists = Math.ceil(skillsetItems.length / (maxSkillsInOneList - 0.5))
+
+    console.log('number of lists: ', numberOfLists)
 
     if (numberOfLists === 8 && skillsetItems.length === 25) {
       numberOfLists--
