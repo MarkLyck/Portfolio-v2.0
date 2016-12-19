@@ -103,7 +103,7 @@ class Toolbelt extends React.Component {
 
 
     return (
-      <section>
+      <section className="toolbelt">
         <h2 className="title">My Toolbelt</h2>
         <h3 className="subtitle">These are some of the tools I use to build websites</h3>
         <div className="skills-container">

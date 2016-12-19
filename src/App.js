@@ -5,6 +5,7 @@ import Work from './components/Work/Work'
 import Toolbelt from './components/Toolbelt/Toolbelt'
 import PersonalProjects from './components/PersonalProjects/PersonalProjects'
 import WorkTogether from './components/WorkTogether/WorkTogether'
+import Footer from './components/Footer/Footer'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Toolbelt />
         <PersonalProjects />
         <WorkTogether />
+        <Footer />
       </div>
     )
   }

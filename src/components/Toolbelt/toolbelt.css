@@ -1,8 +1,11 @@
+@import "../../index.css";
 
 .toolbelt {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: $dark-bg-color;
+  color: #fff;
 }
 
 .skills-container {
