@@ -26,11 +26,11 @@ class Hero extends React.Component {
           <div className="typed">
             <h1 id="build"></h1>
             <div id="builds">
+              <h1>web applications.</h1>
               <h1>landing pages.</h1>
               <h1>user interfaces.</h1>
-              <h1>web applications.</h1>
-              <h1>neural networks.</h1>
-              <h1>Corporate Websites.</h1>
+              <h1>corporate websites.</h1>
+              <h1>your project!</h1>
             </div>
           </div>
           <ContactBtn text="Yes, I'm available for hire"/>
