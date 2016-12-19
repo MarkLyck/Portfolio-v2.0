@@ -1,0 +1,45 @@
+
+.toolbelt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-container {
+    margin: 50px 50px 75px 50px;
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .skill {
+        width: 100px;
+        margin: 0 5px -20px 5px;
+        position: relative;
+        &:hover::after {
+          content: attr(data-name);
+          position: absolute;
+          background: rgba(0,0,0,0.75);
+          padding: 10px 20px;
+          border-radius: 5px;
+          bottom: -45px;
+          max-width: 100vw;
+          left: 50%;
+          transform: translateX(-50%);
+          color: #fff;
+          z-index: 10;
+        }
+        img {
+          width: 100px;
+          transition: transform .5s, opacity .3s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .unselected {
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
