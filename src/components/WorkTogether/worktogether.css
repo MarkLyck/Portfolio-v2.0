@@ -1,0 +1,15 @@
+@import "../../index.css";
+
+.work-together {
+  background: $primary-color;
+  color: #fff;
+  button {
+    color: #fff;
+    border-color: #fff;
+    margin-bottom: 64px;
+    &:hover {
+      background: #fff;
+      color: $black;
+    }
+  }
+}

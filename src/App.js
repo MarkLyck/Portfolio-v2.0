@@ -4,6 +4,7 @@ import Expertise from './components/Expertise/Expertise'
 import Work from './components/Work/Work'
 import Toolbelt from './components/Toolbelt/Toolbelt'
 import PersonalProjects from './components/PersonalProjects/PersonalProjects'
+import WorkTogether from './components/WorkTogether/WorkTogether'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Work />
         <Toolbelt />
         <PersonalProjects />
+        <WorkTogether />
       </div>
     )
   }
