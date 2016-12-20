@@ -1,0 +1,108 @@
+@import "../../index.css";
+
+.contact {
+  // position: relative;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vw;
+  border-radius: 50%;
+  position: fixed;
+  background: $dark-bg-color;
+  animation-duration: 1.5s;
+  animation-name: expand;
+  transform: translate(-50%, -50%) scale(4);
+  overflow: none;
+  z-index: 100;
+}
+
+.contact-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .close-btn {
+    position: absolute;
+    top: 64px;
+    right: 64px;
+    margin: 0;
+    border: none;
+    background-color: #1D292C;
+    background-image: url('./images/close.svg');
+    background-position: center;
+    border-radius: 50%;
+  }
+  .logo {
+    margin-top: 80px;
+    margin-bottom: 64px;
+  }
+  h2 {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  h3 {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: normal;
+    max-width: 600px;
+  }
+  form {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    input {
+      background: none;
+      border: 2px solid #fff;
+      border-radius: 4px;
+      padding: 0 16px;
+      height: 48px;
+      margin: 0 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      width: calc(50% - 16px);
+    }
+    textarea {
+      width: calc(100% - 16px);
+      margin-left: 8px;
+      height: 150px;
+      background: none;
+      border: 2px solid #fff;
+      border-radius: 4px;
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 32px;
+    }
+    .submit {
+      margin: 0 auto;
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+        background: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+
+@keyframes expand {
+  from {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    width: 100vw;
+    height: 100vw;
+    transform: translate(-50%, -50%) scale(4);
+  }
+}
