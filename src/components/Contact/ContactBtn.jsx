@@ -38,12 +38,14 @@ class ContactBtn extends React.Component {
                 <input type="text" placeholder="Phone Number"/>
                 <input type="text" placeholder="Website"/>
               </div>
-              <textarea />
+              <textarea placeholder="Tell me about your project... What is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated." />
               <input type="submit" className="submit" value="Submit your project"/>
             </form>
           </div>
+
           <div className="modal-container"/>
-          <button className="contact-btn" onClick={this.toggleModal}>{this.props.text}</button>
+
+          <button className="contact-btn circle" onClick={this.toggleModal}>{this.props.text}</button>
         </div>)
     }
 
