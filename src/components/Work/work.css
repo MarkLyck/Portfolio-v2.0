@@ -92,3 +92,34 @@
     }
   }
 }
+
+@media (max-width: 1115px) {
+  .projects {
+    .project {
+      padding: 0;
+      .project-container {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 48px;
+        .content {
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 100%;
+          order: -1;
+          .project-task {
+            margin-bottom: 16px;
+          }
+          .cta-list {
+            justify-content: center;
+          }
+        }
+        .mockup {
+          margin: 32px auto 0 auto;
+          order: 1;
+        }
+      }
+    }
+  }
+}
