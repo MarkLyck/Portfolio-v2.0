@@ -8,10 +8,7 @@ class ContactPage extends React.Component {
 
   sendEmail(e) {
     e.preventDefault()
-    // let appKey = 'kid_BkCLw_dNg'
-    // let appSecret = 'a9213b239e414cbfa3f7a960c2009a94'
-    let basicAuth = btoa('kid_BkCLw_dNg:59542cf7ab86454591d5966e7c7c80b1')
-    // let ms = '59542cf7ab86454591d5966e7c7c80b1'
+    const basicAuth = btoa('kid_BkCLw_dNg:59542cf7ab86454591d5966e7c7c80b1')
     $.ajax({
         url: `https://baas.kinvey.com/rpc/kid_BkCLw_dNg/custom/contact`,
         type: 'POST',
@@ -26,8 +23,12 @@ class ContactPage extends React.Component {
           "website": this.refs.website.value
         },
       })
-      .done((r) => {
-        console.log(r)
+      .then((r) => {
+        this.refs.text.value = ''
+        this.refs.name.value = ''
+        this.refs.email.value = ''
+        this.refs.phone.value = ''
+        this.refs.website.value = ''
       })
   }
 
