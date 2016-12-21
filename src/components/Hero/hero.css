@@ -1,3 +1,5 @@
+@import "../../index.css";
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -26,9 +28,19 @@
     display: flex;
     align-items: center;
   }
-  button {
+  .CTA {
     margin-top: 80px;
     color: #fff;
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    &:hover {
+      cursor: pointer;
+      background: $primary-color;
+    }
   }
   .learn-more {
     position: absolute;
@@ -37,6 +49,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #fff;
     &:hover {
       cursor: pointer;
     }

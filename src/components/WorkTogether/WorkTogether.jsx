@@ -1,11 +1,15 @@
 import React from 'react'
 import ContactBtn from '../Contact/ContactBtn'
 import './worktogether.css'
+import Scroll from 'react-scroll'
+
+let Element = Scroll.Element
 
 class WorkTogether extends React.Component {
   render() {
     return (
       <section className="work-together">
+        <Element name="letsWorkTogether"/>
         <h2 className="title">Let's work together</h2>
         <h3 className="subtitle">
           I'm currently accepting new projects and would love to hear about yours.

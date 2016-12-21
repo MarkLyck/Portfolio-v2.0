@@ -2,8 +2,10 @@ import React from 'react'
 import $ from 'jquery'
 import logo from '../../../public/images/logo.svg'
 import './hero.css'
-import ContactBtn from '../Contact/ContactBtn'
 import '../../libraries/typed.js'
+import Scroll from 'react-scroll'
+
+let Link = Scroll.Link
 
 class Hero extends React.Component {
   componentDidMount() {
@@ -33,11 +35,11 @@ class Hero extends React.Component {
               <h1>your project!</h1>
             </div>
           </div>
-          <button>Yes, I'm available for hire</button>
-          <div className="learn-more">
+          <Link to="letsWorkTogether" className="CTA" smooth={true} offset={-80}>Yes, I'm available for hire</Link>
+          <Link to="myExpertise" className="learn-more" smooth={true} offset={-80}>
             <p>Learn more about what I do</p>
             <i className="fa fa-chevron-down" aria-hidden="true"></i>
-          </div>
+          </Link>
       </div>
     )
   }

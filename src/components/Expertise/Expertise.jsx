@@ -1,10 +1,14 @@
 import React from 'react'
 import './expertise.css'
+import Scroll from 'react-scroll'
+
+let Element = Scroll.Element
 
 class Expertise extends React.Component {
   render() {
     return (
       <section className="expertise">
+        <Element name="myExpertise"/>
         <h2 className="title">My Expertise</h2>
         <h3 className="subtitle">I've got chops in all parts of the process</h3>
 
