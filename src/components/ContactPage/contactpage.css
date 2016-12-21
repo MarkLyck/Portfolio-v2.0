@@ -2,22 +2,23 @@
 
 .contact-page {
   width: 100%;
-  z-index: 110;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation-duration: 1.5s;
-  animation-name: fadein;
   padding: 64px 0;
   background: $dark-bg-color;
   color: #fff;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-duration: 0.5s;
+    animation-name: fadein;
+  }
   .close-btn {
     position: absolute;
     top: 64px;
     right: 64px;
     margin: 0;
+    width: 48px;
+    height: 48px;
     border: none;
     background-color: #1D292C;
     background-image: url('./images/close.svg');
@@ -85,13 +86,10 @@
 }
 
 @keyframes fadein {
-  0% {
+  from {
     opacity: 0;
   }
-  75% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 100%;
   }
 }
