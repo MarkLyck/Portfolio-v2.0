@@ -1,74 +1,104 @@
 @import "../../index.css";
 
+html, body {
+  overflow-x: hidden;
+}
+
 
 .contact {
-  position: relative;
+  top: calc(64px + 80px + 48px + 32px);
+  position: absolute;
+  background: red !important;
+  box-sizing: border-box;
   .modal-container {
     width: 100vw;
-    height: 100vw;
-    border-radius: 50%;
+    height: 100vh;
+    box-sizing: border-box;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     background: $dark-bg-color;
-    animation-duration: 1s;
-    animation-name: expand;
-    transform: translate(-50%, -50%) scale(4);
-    overflow: none;
     z-index: 100;
+    animation-duration: 1.5s;
+    animation-name: showup;
+    opacity: 100;
   }
 }
 
-@keyframes expand {
+@keyframes showup {
   0% {
-    width: 0;
-    height: 0;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
   }
-  50% {
-    width: 0;
-    height: 0;
-    transform: translate(-50%, -50%) scale(1);
+  75% {
+    opacity: 0;
   }
   100% {
-    width: 100vw;
-    height: 100vw;
-    transform: translate(-50%, -50%) scale(4);
+    opacity: 100;
   }
 }
 
 .contact-btn {
+  position: absolute;
+  border-color: #fff;
+  top: calc(64px + 80px + 48px + 32px);
   width: 200px;
+  color: rgba(255,255,255,1);
+  &:hover {
+    background: #fff;
+    color: $black;
+  }
 }
 
 .circle {
-  width: 48px;
+  top: 0;
+  margin-top: 25px;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+  transform: translate(-50%, -50%) scale(4);
   border-radius: 24px;
-  animation-duration: 0.5s;
+  box-sizing: border-box;
+  animation-duration: 1s;
   animation-name: makecircle;
   color: rgba(255,255,255,0);
+  background: $dark-bg-color;
+  border-color: rgba(0,0,0,0);
 }
 
 @keyframes makecircle {
   0% {
     width: 200px;
+    height: 48px;
     border-radius: 8px;
     color: rgba(255,255,255,1);
+    background: rgba(255,255,255,0);
+    transform: translate(-50%, -50%) scale(1);
+    border-color: rgba(255,255,255,1);
   }
-  20% {
+  25% {
     color: rgba(255,255,255,0);
   }
-  100% {
+  50% {
     width: 48px;
+    height: 48px;
     border-radius: 24px;
     color: rgba(255,255,255,0);
+    background: $dark-bg-color;
+    border-color: rgba(0,0,0,0);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    width: 100vw;
+    height: 100vw;
+    transform: translate(-50%, -50%) scale(4);
   }
 }
+
 
 .contact-modal {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 110;
   top: 0;
   left: 0;
@@ -77,6 +107,7 @@
   align-items: center;
   animation-duration: 1.5s;
   animation-name: fadein;
+  padding-bottom: 64px;
   .close-btn {
     position: absolute;
     top: 64px;
@@ -106,7 +137,7 @@
   }
   form {
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     input {
@@ -116,16 +147,17 @@
       border-radius: 4px;
       padding: 0 16px;
       height: 48px;
-      margin: 0 8px;
-      margin-bottom: 16px;
+      margin: 0 16px;
+      margin-bottom: 32px;
       box-sizing: border-box;
-      width: calc(50% - 16px);
+      width: calc(50% - 32px);
+      font-size: 16px;
     }
     textarea {
       outline: none;
       color: #fff;
-      width: calc(100% - 16px);
-      margin-left: 8px;
+      width: calc(100% - 32px);
+      margin-left: 16px;
       height: 150px;
       background: none;
       border: 2px solid #fff;
@@ -133,11 +165,13 @@
       padding: 16px;
       box-sizing: border-box;
       margin-bottom: 32px;
+      font-size: 16px;
     }
     .submit {
       margin: 0 auto;
       color: #fff;
       border-color: $primary-color;
+      margin-bottom: 64px;
       &:hover {
         cursor: pointer;
         background: $primary-color;

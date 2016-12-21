@@ -2,8 +2,9 @@
 
 .work-together {
   background: $primary-color;
+  position: relative;
   color: #fff;
-  button {
+  /*button {
     color: #fff;
     border-color: #fff;
     margin-bottom: 64px;
@@ -11,5 +12,8 @@
       background: #fff;
       color: $black;
     }
+  }*/
+  .also {
+    margin-top: 80px;
   }
 }

@@ -33,7 +33,7 @@ class Hero extends React.Component {
               <h1>your project!</h1>
             </div>
           </div>
-          <ContactBtn text="Yes, I'm available for hire"/>
+          <button>Yes, I'm available for hire</button>
           <div className="learn-more">
             <p>Learn more about what I do</p>
             <i className="fa fa-chevron-down" aria-hidden="true"></i>
