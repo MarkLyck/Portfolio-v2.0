@@ -6,7 +6,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <img src={logo} alt="logo"/>
+        <img src={logo} alt="logo" className="logo"/>
         <h3 className="copyright">Handmade by me © 2016</h3>
         <ul className="footer-links">
           <a className="footer-link"><i className="fa fa-envelope" aria-hidden="true"></i></a>

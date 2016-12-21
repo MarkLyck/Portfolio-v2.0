@@ -13,6 +13,10 @@
   .logo {
     margin-top: 80px;
     margin-bottom: 100px;
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   h1, span {
     font-size: 56px;
