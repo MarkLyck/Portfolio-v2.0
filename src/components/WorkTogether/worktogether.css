@@ -4,16 +4,33 @@
   background: $primary-color;
   position: relative;
   color: #fff;
-  /*button {
-    color: #fff;
-    border-color: #fff;
-    margin-bottom: 64px;
-    &:hover {
-      background: #fff;
-      color: $black;
-    }
-  }*/
+  text-align: center;
   .also {
     margin-top: 80px;
+  }
+}
+
+@media (max-width: 1143px) {
+  .work-together {
+    .also {
+      margin-top: 48px;
+    }
+  }
+}
+
+@media (max-width: 664px) {
+  .work-together {
+    padding: 80px 32px;
+  }
+}
+
+@media (max-width: 567px) {
+  .work-together {
+    button {
+      margin-top: 24px;
+    }
+    /*.also {
+      margin-top: 48px;
+    }*/
   }
 }

@@ -18,9 +18,9 @@ class Work extends React.Component {
                 <h3 className="project-task">{project.task}</h3>
                 <p className="project-desc">{project.description}</p>
                 <ul className="cta-list">
-                  {project.website ? <a href={project.website} className="CTA">Visit Website</a> : '' }
-                  {project.caseStudy ? <a href={project.caseStudy} className="CTA">Case Study</a> : '' }
-                  {project.github ? <a href={project.github} className="CTA"><i className="fa fa-github" aria-hidden="true"></i> GitHub</a> : '' }
+                  {project.website ? <a href={project.website} className="CTA" target="_blank">Visit Website</a> : '' }
+                  {project.caseStudy ? <a href={project.caseStudy} className="CTA" target="_blank">Case Study</a> : '' }
+                  {project.github ? <a href={project.github} className="CTA" target="_blank"><i className="fa fa-github" aria-hidden="true"></i> GitHub</a> : '' }
                 </ul>
               </div>
               <div className="mockup">
