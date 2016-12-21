@@ -20,7 +20,7 @@ export default [
                   to beat the stock market >90% of the time for long term growth and profitability.`,
     image: FSMockup,
     website: 'https://formulastocks.com',
-    caseStudy: '/formulastocks',
+    // caseStudy: '/formulastocks',
     github: 'https://github.com/MarkLyck/Formula-Stocks',
     review: {
       name: 'Thomas L. CEO of Formula Stocks',

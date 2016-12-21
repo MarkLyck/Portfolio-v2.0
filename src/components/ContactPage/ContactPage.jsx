@@ -2,8 +2,35 @@ import React from 'react'
 import { Link } from 'react-router'
 import logo from '../../../public/images/logo.svg'
 import './contactpage.css'
+import $ from 'jquery'
 
 class ContactPage extends React.Component {
+
+  sendEmail(e) {
+    e.preventDefault()
+    // let appKey = 'kid_BkCLw_dNg'
+    // let appSecret = 'a9213b239e414cbfa3f7a960c2009a94'
+    let basicAuth = btoa('kid_BkCLw_dNg:59542cf7ab86454591d5966e7c7c80b1')
+    // let ms = '59542cf7ab86454591d5966e7c7c80b1'
+    $.ajax({
+        url: `https://baas.kinvey.com/rpc/kid_BkCLw_dNg/custom/contact`,
+        type: 'POST',
+        headers: {
+          "Authorization": `Basic ${basicAuth}`
+        },
+        data: {
+          "body": this.refs.text.value,
+          "name": this.refs.name.value,
+          "email": this.refs.email.value,
+          "phone": this.refs.phone.value,
+          "website": this.refs.website.value
+        },
+      })
+      .done((r) => {
+        console.log(r)
+      })
+  }
+
   render() {
     return (
       <div className="contact-page">
@@ -15,16 +42,16 @@ class ContactPage extends React.Component {
               I'll get it touch with you to schedule a time to chat.
               You should expect to hear from me in a day or so.
           </h3>
-          <form>
+          <form onSubmit={this.sendEmail.bind(this)}>
             <div className="name-email">
-              <input type="text" placeholder="First Name"/>
-              <input type="email" placeholder="email"/>
+              <input type="text" placeholder="First Name" ref="name"/>
+              <input type="email" placeholder="email" ref="email"/>
             </div>
             <div className="phone-website">
-              <input type="text" placeholder="Phone Number"/>
-              <input type="text" placeholder="Website"/>
+              <input type="text" placeholder="Phone Number" ref="phone"/>
+              <input type="text" placeholder="Website" ref="website"/>
             </div>
-            <textarea placeholder="Tell me about your project... What is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated." />
+            <textarea ref="text" placeholder="Tell me about your project... What is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated." />
             <input type="submit" className="submit" value="Submit your project"/>
           </form>
         </div>

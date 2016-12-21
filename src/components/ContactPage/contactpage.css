@@ -34,15 +34,16 @@
     margin-bottom: 32px;
   }
   h3 {
-    max-width: 800px;
     text-align: center;
+    margin: 0 32px;
     margin-bottom: 32px;
     font-weight: normal;
-    max-width: 600px;
+    max-width: 640px;
   }
   form {
     width: 100%;
     max-width: 550px;
+    margin: 0 32px;
     display: flex;
     flex-direction: column;
     input {
@@ -91,5 +92,11 @@
   }
   to {
     opacity: 100%;
+  }
+}
+
+@media (max-width: 664px) {
+  .work-together {
+    padding: 80px 32px;
   }
 }
