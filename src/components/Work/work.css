@@ -44,7 +44,7 @@
       .cta-list {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 16px;
+        margin-top: 24px;
         a {
           height: 48px;
           display: flex;

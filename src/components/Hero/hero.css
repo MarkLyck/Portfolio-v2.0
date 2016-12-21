@@ -20,6 +20,7 @@
   }
   .title {
     margin-bottom: 32px;
+    margin: 0 32px;
   }
   .thin {
     font-weight: 100;
