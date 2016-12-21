@@ -1,0 +1,97 @@
+@import "../../index.css";
+
+.contact-page {
+  width: 100%;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-duration: 1.5s;
+  animation-name: fadein;
+  padding: 64px 0;
+  background: $dark-bg-color;
+  color: #fff;
+  .close-btn {
+    position: absolute;
+    top: 64px;
+    right: 64px;
+    margin: 0;
+    border: none;
+    background-color: #1D292C;
+    background-image: url('./images/close.svg');
+    background-position: center;
+    border-radius: 50%;
+  }
+  .logo {
+    margin-bottom: 64px;
+  }
+  h2 {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  h3 {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: normal;
+    max-width: 600px;
+  }
+  form {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    input {
+      outline: none;
+      background: none;
+      border: 2px solid #fff;
+      border-radius: 4px;
+      padding: 0 16px;
+      height: 48px;
+      margin: 0 16px;
+      margin-bottom: 32px;
+      box-sizing: border-box;
+      width: calc(50% - 32px);
+      font-size: 16px;
+    }
+    textarea {
+      outline: none;
+      color: #fff;
+      width: calc(100% - 32px);
+      margin-left: 16px;
+      height: 150px;
+      background: none;
+      border: 2px solid #fff;
+      border-radius: 4px;
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+    .submit {
+      margin: 0 auto;
+      color: #fff;
+      border-color: $primary-color;
+      &:hover {
+        cursor: pointer;
+        background: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
