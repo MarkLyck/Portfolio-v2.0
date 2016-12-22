@@ -6,30 +6,54 @@ import $ from 'jquery'
 
 class ContactPage extends React.Component {
 
+  constructor(props) {
+    super(props)
+
+    this.sendEmail = this.sendEmail.bind(this)
+    this.renderBtn = this.renderBtn.bind(this)
+    this.state = { state: 'submit' }
+  }
+
   sendEmail(e) {
     e.preventDefault()
-    const basicAuth = btoa('kid_BkCLw_dNg:59542cf7ab86454591d5966e7c7c80b1')
-    $.ajax({
-        url: `https://baas.kinvey.com/rpc/kid_BkCLw_dNg/custom/contact`,
-        type: 'POST',
-        headers: {
-          "Authorization": `Basic ${basicAuth}`
-        },
-        data: {
-          "body": this.refs.text.value,
-          "name": this.refs.name.value,
-          "email": this.refs.email.value,
-          "phone": this.refs.phone.value,
-          "website": this.refs.website.value
-        },
-      })
-      .then((r) => {
-        this.refs.text.value = ''
-        this.refs.name.value = ''
-        this.refs.email.value = ''
-        this.refs.phone.value = ''
-        this.refs.website.value = ''
-      })
+    if (this.state.state === 'submit') {
+      this.setState({ state: 'submitting' })
+      const basicAuth = btoa('kid_BkCLw_dNg:59542cf7ab86454591d5966e7c7c80b1')
+      $.ajax({
+          url: `https://baas.kinvey.com/rpc/kid_BkCLw_dNg/custom/contact`,
+          type: 'POST',
+          headers: {
+            "Authorization": `Basic ${basicAuth}`
+          },
+          data: {
+            "body": this.refs.text.value,
+            "name": this.refs.name.value,
+            "email": this.refs.email.value,
+            "phone": this.refs.phone.value,
+            "website": this.refs.website.value
+          },
+        })
+        .then((r) => {
+          this.refs.text.value = ''
+          this.refs.name.value = ''
+          this.refs.email.value = ''
+          this.refs.phone.value = ''
+          this.refs.website.value = ''
+          this.setState({ state: 'submitted' })
+        })
+    } else {
+      console.error('you are already submitting')
+    }
+  }
+
+  renderBtn() {
+    if (this.state.state === 'submit') {
+      return <input type="submit" className="submit" value="Submit your project"/>
+    } else if (this.state.state === 'submitting') {
+      return <button className="submit submitting"><i className="fa fa-spinner fa-pulse fa-fw"></i></button>
+    } else {
+      return <button className="submit submitted"><i className="fa fa-check" aria-hidden="true"></i> Submitted</button>
+    }
   }
 
   render() {
@@ -53,7 +77,7 @@ class ContactPage extends React.Component {
               <input type="text" placeholder="Website" ref="website"/>
             </div>
             <textarea ref="text" placeholder="Tell me about your project... What is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated." />
-            <input type="submit" className="submit" value="Submit your project"/>
+            {this.renderBtn()}
           </form>
         </div>
       </div>

@@ -76,12 +76,29 @@
     }
     .submit {
       margin: 0 auto;
+      width: 250px;
       color: #fff;
       border-color: $primary-color;
       &:hover {
         cursor: pointer;
         background: $primary-color;
         border-color: $primary-color;
+      }
+    }
+    .submitting {
+      background: $primary-color;
+    }
+    .submitted {
+      width: 250px;
+      background: $green-color;
+      border-color: $green-color;
+      i {
+        margin-right: 8px;
+      }
+      &:hover {
+        background: $green-color;
+        border-color: $green-color;
+        cursor: auto;
       }
     }
   }
