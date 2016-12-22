@@ -89,7 +89,7 @@ class ContactPage extends React.Component {
               <input type="text" placeholder="Phone Number" ref="phone"/>
               <input type="text" placeholder="Website" ref="website"/>
             </div>
-            <textarea ref="text" placeholder="Tell me about your project... What is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated.*" />
+            <textarea ref="text" placeholder="Tell me about your project... What is it and How can I help? Timeline and budget details are also appreciated.*" />
             {this.renderBtn()}
           </form>
         </div>

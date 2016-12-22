@@ -38,7 +38,7 @@ class Expertise extends React.Component {
             <h3 className="list-title">Extra Touch</h3>
             <p>
               Besides just building websites, I always make sure everything I build is well optimized for both speed and Search engines.
-              Everything I build is responsive to look great on any device, and security is top notch.
+              Everything I build is responsive to look great on any device, and security is always a priority.
             </p>
           </li>
         </ul>
