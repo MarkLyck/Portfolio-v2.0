@@ -8,6 +8,8 @@
   align-items: center;
   color: #fff;
   background: url('../../../public/images/Background.jpg');
+  background-attachment: fixed;
+  background-position: center;
   position: relative;
 
   .logo {

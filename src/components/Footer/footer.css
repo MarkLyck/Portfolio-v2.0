@@ -1,7 +1,9 @@
 @import "../../index.css";
 
 footer {
-  background: $dark-bg-color;
+  background: url('../../../public/images/Background.jpg');
+  background-attachment: fixed;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;

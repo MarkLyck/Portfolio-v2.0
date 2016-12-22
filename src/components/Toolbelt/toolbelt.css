@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $dark-bg-color;
+  background: url('../../../public/images/Background.jpg');
+  background-attachment: fixed;
+  background-position: center;
   color: #fff;
 }
 
