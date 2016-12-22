@@ -12,6 +12,7 @@ $border-color: #D6E1E5;
 $secondary-bg-color: #EFEFEF;
 $dark-bg-color: #2B3A3F;
 $green-color: #23c672;
+$error-color: #c6234a;
 
 ul {
   list-style: none;

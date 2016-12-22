@@ -40,6 +40,12 @@
     font-weight: normal;
     max-width: 640px;
   }
+  .error {
+    background: $error-color;
+    padding: 8px 16px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+  }
   form {
     width: 100%;
     max-width: 550px;
