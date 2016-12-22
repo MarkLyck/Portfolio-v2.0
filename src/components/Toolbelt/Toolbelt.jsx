@@ -33,7 +33,9 @@ class Toolbelt extends React.Component {
     let skillWidth = 111
     let maxSkillsInOneList = Math.floor(((this.state.windowWidth - 160) / skillWidth))
 
-    if (this.state.windowWidth < 400) {
+    const cutoffpoint = 620
+
+    if (this.state.windowWidth < cutoffpoint) {
       skillWidth = 64
       maxSkillsInOneList = Math.floor(((this.state.windowWidth - 100) / skillWidth))
     }
@@ -103,7 +105,7 @@ class Toolbelt extends React.Component {
       if (skillsInLastList % 2 === 0 && skillsInThisList % 2 === 0) {
         // if it's the last list
         if (i === skillLists.length - 1) {
-          if (this.state.windowWidth > 400) {
+          if (this.state.windowWidth > cutoffpoint) {
             return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
           } else {
             return (<ul className="skill-list" key={i} style={{marginRight: "64px"}}>{skillsInList}</ul>)
@@ -112,7 +114,7 @@ class Toolbelt extends React.Component {
       } else if (skillsInLastList % 2 !== 0 && skillsInThisList % 2 !== 0) {
         // if it's the last list
         if (i === skillLists.length - 1) {
-          if (this.state.windowWidth > 400) {
+          if (this.state.windowWidth > cutoffpoint) {
             return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
           } else {
             return (<ul className="skill-list" key={i} style={{marginRight: "64px"}}>{skillsInList}</ul>)
