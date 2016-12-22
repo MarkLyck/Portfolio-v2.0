@@ -41,6 +41,10 @@ const skills = [
     img: require('./skills_images/node.png')
   },
   {
+    name: 'Python',
+    img: require('./skills_images/python.png')
+  },
+  {
     name: 'Git',
     img: require('./skills_images/git.png')
   },

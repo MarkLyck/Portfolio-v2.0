@@ -37,7 +37,7 @@ export default [
                   and clears the way for organizations to easily manage their events,
                   transactions and members.`,
     image: TetherMockup,
-    website: 'https://tethersocial.com',
+    website: 'http://tethersocial.com',
     caseStudy: '',
     github: '',
     review: {
