@@ -30,8 +30,16 @@ class Toolbelt extends React.Component {
   }
 
   render() {
-    const skillWidth = 111
+    let skillWidth = 111
     let maxSkillsInOneList = Math.floor(((this.state.windowWidth - 160) / skillWidth))
+
+    if (this.state.windowWidth < 400) {
+      skillWidth = 64
+      maxSkillsInOneList = Math.floor(((this.state.windowWidth - 100) / skillWidth))
+    }
+
+    // console.log('skills in one list: ', maxSkillsInOneList)
+
 
     let skillsetItems = skills.map((skill, i) => {
       if (this.state.hoverEffect === i) {
@@ -59,46 +67,61 @@ class Toolbelt extends React.Component {
 
     let numberOfLists = Math.ceil(skillsetItems.length / (maxSkillsInOneList - 0.5))
 
-    console.log('number of lists: ', numberOfLists)
-
-    if (numberOfLists === 8 && skillsetItems.length === 25) {
-      numberOfLists--
-    }
+    // console.log('number of lists: ', numberOfLists)
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 
-    let currentSkill = 0;
+    let currentSkill = 0
+
+    let skillsInLastList = 0
+    let skillsInThisList = 0
 
     skillLists = skillLists.map((skillList, i) => {
-      let skillsInList = [];
+      skillsInThisList = 0
+      let skillsInList = []
       if(i % 2 === 0) {
         while (skillsInList.length < maxSkillsInOneList) {
-          skillsInList.push(skillsetItems[currentSkill]);
-          currentSkill++;
+          skillsInList.push(skillsetItems[currentSkill])
+          currentSkill++
+          if (!skillsetItems[currentSkill]) {
+            skillsInThisList++
+          }
         }
       } else {
         while (skillsInList.length < (maxSkillsInOneList - 1)) {
-          skillsInList.push(skillsetItems[currentSkill]);
-          currentSkill++;
+          skillsInList.push(skillsetItems[currentSkill])
+          currentSkill++
+          if (!skillsetItems[currentSkill]) {
+            skillsInThisList++
+          }
         }
       }
 
       skillsInList = _.without(skillsInList, undefined);
 
-      let skillsInAboveList = maxSkillsInOneList
-      if ((numberOfLists - 2) % 2 !== 0) { skillsInAboveList = maxSkillsInOneList - 1 }
-
-      let aboveListIsEven = true;
-      if (skillsInAboveList % 2 !== 0) { aboveListIsEven = false; }
-
-      let lastListIsEven = true;
-      if ((skillsInList.length) % 2 !== 0) { lastListIsEven = false; }
-
-      if (currentSkill >= skillsetItems.length && aboveListIsEven === lastListIsEven) {
-        return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>);
-      } else {
-        return (<ul className="skill-list" key={i}>{skillsInList}</ul>);
+      // If they are both even.
+      if (skillsInLastList % 2 === 0 && skillsInThisList % 2 === 0) {
+        // if it's the last list
+        if (i === skillLists.length - 1) {
+          if (this.state.windowWidth > 400) {
+            return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
+          } else {
+            return (<ul className="skill-list" key={i} style={{marginRight: "64px"}}>{skillsInList}</ul>)
+          }
+        }
+      } else if (skillsInLastList % 2 !== 0 && skillsInThisList % 2 !== 0) {
+        // if it's the last list
+        if (i === skillLists.length - 1) {
+          if (this.state.windowWidth > 400) {
+            return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
+          } else {
+            return (<ul className="skill-list" key={i} style={{marginRight: "64px"}}>{skillsInList}</ul>)
+          }
+        }
       }
+
+      skillsInLastList = skillsInThisList
+      return (<ul className="skill-list" key={i}>{skillsInList}</ul>)
     })
 
 

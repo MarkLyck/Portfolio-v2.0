@@ -31,3 +31,11 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .work-together {
+    button {
+      margin-top: 48px;
+    }
+  }
+}

@@ -67,7 +67,7 @@
   }
 }
 
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
@@ -87,4 +87,15 @@
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    h1, .title, .thin, .typed-cursor {
+      font-size: 1.4rem;
+    }
+    .title {
+      margin-bottom: 8px;
+    }
+  }
 }
