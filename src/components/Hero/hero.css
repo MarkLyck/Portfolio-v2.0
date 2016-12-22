@@ -10,6 +10,7 @@
   background: url('../../../public/images/Background.jpg');
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
   position: relative;
 
   .logo {
