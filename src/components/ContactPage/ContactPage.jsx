@@ -19,7 +19,7 @@ class ContactPage extends React.Component {
   sendEmail(e) {
     e.preventDefault()
     if (this.state.state === 'submit') {
-      if (!this.refs.text.value || !this.refs.email.value || this.refs.name.value) {
+      if (!this.refs.text.value || !this.refs.email.value || !this.refs.name.value) {
         this.setState({ error: 'Please fill out all required fields' })
         return null
       }

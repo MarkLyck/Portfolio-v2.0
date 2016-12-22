@@ -17,7 +17,7 @@ class PersonalProjects extends React.Component {
             <p className="description">
               AIMI is a conversational AI, built on a sequence to secuence neural network,
               with Python & Tensorflow. It’s trained on subtitles from over 700 movies.
-              With my own Natural Language language processing layer.
+              With my own Natural Language Processing layer.
             </p>
           </li>
 

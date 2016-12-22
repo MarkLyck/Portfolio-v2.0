@@ -16,7 +16,7 @@ class WorkTogether extends React.Component {
           Please take a few minutes to tell me about it.
         </h3>
         <ContactBtn text="Get Started"/>
-        <h3 className="also">I’d also be interested in a job interview, for a work place that can provide me with a challenge!</h3>
+        <h3 className="also">I’d also be interested in a job interview for a work place that can provide me with a challenge!</h3>
       </section>
     )
   }

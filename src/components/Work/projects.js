@@ -35,7 +35,7 @@ export default [
     description: `Tether is a group discovery and management platform.
                   Connecting students to organizations on their campus,
                   and clears the way for organizations to easily manage their events,
-                  transactiosn and members.`,
+                  transactions and members.`,
     image: TetherMockup,
     website: 'https://tethersocial.com',
     caseStudy: '',
@@ -50,7 +50,7 @@ export default [
     title: 'Bring the Band',
     task: 'Fullstack web application.',
     description: `Bring the Band, allows users to vote on their favorite bands to attend a festival.
-                  They can purchase tickets to the festival, through secure credit transacitons.
+                  They can purchase tickets to the festival, through secure credit card transactions.
                   Listen to music and more.`,
     image: BtBMockup,
     website: 'https://marklyck.github.io/Bring-the-Band/',
