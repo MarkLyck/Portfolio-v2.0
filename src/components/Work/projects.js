@@ -73,9 +73,9 @@ export default [
                   run methods, see what software versions they are on,
                   even update and restart their systems`,
     image: OpenBMCMockup,
-    website: 'https://marklyck.github.io/Bring-the-Band/',
+    website: '',
     caseStudy: '',
-    github: 'https://github.com/MarkLyck/Bring-the-Band',
+    github: '',
     review: {
       name: 'Ben Gillin',
       image: Ben,
