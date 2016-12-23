@@ -30,99 +30,73 @@ class Toolbelt extends React.Component {
   }
 
   render() {
-    let skillWidth = 111
-    let maxSkillsInOneList = Math.floor(((this.state.windowWidth - 160) / skillWidth))
+    let skillWidth = 110
+    let margin = 80
+    let maxSkillsInOneList = Math.floor(((this.state.windowWidth - (margin * 2)) / skillWidth))
 
     const cutoffpoint = 641
 
     if (this.state.windowWidth < cutoffpoint) {
       skillWidth = 64
-      maxSkillsInOneList = Math.floor(((this.state.windowWidth - 100) / skillWidth))
+      margin = 64
+      maxSkillsInOneList = Math.floor(((this.state.windowWidth - (margin * 2)) / skillWidth))
     }
 
-    // console.log('skills in one list: ', maxSkillsInOneList)
-
-
     let skillsetItems = skills.map((skill, i) => {
+      let skillClasses = 'skill'
       if (this.state.hoverEffect === i) {
-        return (<li key={i} className="skill hover"
-                data-name={skill.name}
-                onMouseLeave={this.hoverEffect.bind(this, i)}>
-                  <img src={skill.img} alt="skill"/>
-                </li>)
-      } else if (this.state.hoverEffect !== false) {
-        return (<li key={i} className="skill unselected"
-                data-name={skill.name}
-                onMouseOver={this.hoverEffect.bind(this, i)}>
-                  <img src={skill.img} alt="skill"/>
-                </li>)
-      } else {
-        return (<li key={i} className="skill"
-                data-name={skill.name}
-                onMouseOver={this.hoverEffect.bind(this, i)}>
-                  <img src={skill.img} alt="skill"/>
-                </li>)
-      }
+         skillClasses += ' hover'
+         return (<li key={i} className={skillClasses}
+                 data-name={skill.name}
+                 onMouseLeave={this.hoverEffect.bind(this, i)}>
+                   <img src={skill.img} alt="skill"/>
+                 </li>)
+      } else if (this.state.hoverEffect !== false) { skillClasses += ' unselected' }
+
+      return (<li key={i} className={skillClasses}
+              data-name={skill.name}
+              onMouseOver={this.hoverEffect.bind(this, i)}>
+                <img src={skill.img} alt="skill"/>
+              </li>)
     })
 
     let skillLists = []
-
-    let numberOfLists = Math.ceil(skillsetItems.length / (maxSkillsInOneList - 0.5))
-
-    // console.log('number of lists: ', numberOfLists)
+    let numberOfLists = Math.round(skillsetItems.length / (maxSkillsInOneList - 0.5))
 
     while (skillLists.length < numberOfLists) { skillLists.push('list') }
 
     let currentSkill = 0
 
-    let skillsInLastList = 0
-    let skillsInThisList = 0
+    let numberOfSkillsInLastList = 0
+    let numberOfSkillsInThisList = 0
 
     skillLists = skillLists.map((skillList, i) => {
-      skillsInThisList = 0
+      numberOfSkillsInThisList = 0
+
+      let maxNumberOfSkillsInThisList = maxSkillsInOneList
+      if(i % 2 !== 0) { maxNumberOfSkillsInThisList-- }
+
       let skillsInList = []
-      if(i % 2 === 0) {
-        while (skillsInList.length < maxSkillsInOneList) {
-          skillsInList.push(skillsetItems[currentSkill])
-          currentSkill++
-          if (!skillsetItems[currentSkill]) {
-            skillsInThisList++
-          }
+      while (skillsInList.length <= maxNumberOfSkillsInThisList) {
+        skillsInList.push(skillsetItems[currentSkill])
+        if (skillsetItems[currentSkill]) {
+          numberOfSkillsInThisList++
         }
-      } else {
-        while (skillsInList.length < (maxSkillsInOneList - 1)) {
-          skillsInList.push(skillsetItems[currentSkill])
-          currentSkill++
-          if (!skillsetItems[currentSkill]) {
-            skillsInThisList++
-          }
+        currentSkill++
+      }
+
+
+      skillsInList = _.without(skillsInList, undefined)
+
+      // If they are both even or uneven.
+      if ((numberOfSkillsInLastList % 2 === 0 && numberOfSkillsInThisList % 2 === 0) || (numberOfSkillsInLastList % 2 !== 0 && numberOfSkillsInThisList % 2 !== 0)) {
+        // if it's the last list
+        if (i === skillLists.length - 1) {
+          return <ul className="skill-list" key={i} style={{marginRight: `${skillWidth}px`}}>{skillsInList}</ul>
         }
       }
 
-      skillsInList = _.without(skillsInList, undefined);
-
-      // If they are both even.
-      if (skillsInLastList % 2 === 0 && skillsInThisList % 2 === 0) {
-        // if it's the last list
-        if (i === skillLists.length - 1) {
-          if (this.state.windowWidth > cutoffpoint) {
-            return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
-          } else {
-            return (<ul className="skill-list" key={i} style={{marginRight: "64px"}}>{skillsInList}</ul>)
-          }
-        }
-      } else if (skillsInLastList % 2 !== 0 && skillsInThisList % 2 !== 0) {
-        // if it's the last list
-        if (i === skillLists.length - 1) {
-          if (this.state.windowWidth > cutoffpoint) {
-            return (<ul className="skill-list" key={i} style={{marginRight: "110px"}}>{skillsInList}</ul>)
-          } else {
-            return (<ul className="skill-list" key={i} style={{marginRight: "64px"}}>{skillsInList}</ul>)
-          }
-        }
-      }
-
-      skillsInLastList = skillsInThisList
+      numberOfSkillsInLastList = numberOfSkillsInThisList
       return (<ul className="skill-list" key={i}>{skillsInList}</ul>)
     })
 
