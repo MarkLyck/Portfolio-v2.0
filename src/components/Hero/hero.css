@@ -1,5 +1,7 @@
 @import "../../index.css";
 
+
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -7,9 +9,8 @@
   flex-direction: column;
   align-items: center;
   color: #fff;
-  background: url('../../../public/images/Background.jpg');
   background-attachment: fixed;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   position: relative;
 
@@ -17,17 +18,22 @@
     margin-top: 80px;
     margin-bottom: 100px;
     transition: transform 0.5s;
+    z-index: 1;
     &:hover {
       transform: scale(1.1);
     }
   }
   h1, span {
-    font-size: 56px;
+    font-size: 40px;
     text-align: center;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    /*color: #49494a;*/
+    z-index: 1;
   }
   .title {
-    margin-bottom: 32px;
     margin: 0 32px;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.3);
   }
   .thin {
     font-weight: 100;
@@ -37,17 +43,19 @@
     align-items: center;
   }
   .CTA {
-    margin-top: 80px;
+    margin-top: 64px;
     color: #fff;
-    border: 2px solid $primary-color;
-    border-radius: 8px;
-    height: 48px;
+    background: $primary-color;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24), 0 0 1px 0 rgba(0,0,0,0.12);
+    z-index: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 16px;
     &:hover {
       cursor: pointer;
-      background: $primary-color;
+      background: color($primary-color lightness(-10%));
     }
   }
   .learn-more {
@@ -58,6 +66,7 @@
     flex-direction: column;
     align-items: center;
     color: #fff;
+    z-index: 1;
     &:hover {
       cursor: pointer;
     }
@@ -65,6 +74,13 @@
       margin: 0;
       margin-bottom: 8px;
     }
+  }
+  #particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #182327;
+    z-index: 0;
   }
 }
 

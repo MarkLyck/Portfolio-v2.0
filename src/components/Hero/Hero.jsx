@@ -1,14 +1,20 @@
+/*eslint-disable */
 import React from 'react'
 import $ from 'jquery'
 import logo from '../../../public/images/logo.svg'
+import 'particles.js'
 import './hero.css'
 import '../../libraries/typed.js'
 import Scroll from 'react-scroll'
+import particleConfig from './particles.json'
 
 let Link = Scroll.Link
 
 class Hero extends React.Component {
   componentDidMount() {
+    particlesJS("particles-js", particleConfig, () => {
+      console.log('particles loaded');
+    })
     $("#build").typed({
         stringsElement: $('#builds'),
         typeSpeed: 0,
@@ -40,6 +46,7 @@ class Hero extends React.Component {
             <p>Learn more about what I do</p>
             <i className="fa fa-chevron-down" aria-hidden="true"></i>
           </Link>
+          <div id="particles-js"></div>
       </div>
     )
   }
