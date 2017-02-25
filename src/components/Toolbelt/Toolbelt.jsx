@@ -1,6 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
 import _ from 'lodash'
+import { Element } from 'react-scroll'
 import './toolbelt.css'
 
 import skills from './skills'
@@ -19,6 +20,17 @@ class Toolbelt extends React.Component {
     $(window).resize(() => {
       this.setState({ resize: true, windowWidth: $(window).width() })
     })
+
+    const project1 = $('.toolbelt').offset().top;
+    const screen_height = $(window).height();
+    const activation_offset = 0.5;
+    const activation_point1 = project1 - (screen_height * activation_offset);
+
+    $(window).on('scroll', () => {
+        const y_scroll_pos = window.pageYOffset;
+        const project1_in_view = y_scroll_pos > activation_point1 && y_scroll_pos - screen_height/1.5 < activation_point1;
+        if (project1_in_view) { this.props.setPage(5) }
+    })
   }
 
   componentWillUnmount() {
@@ -31,7 +43,7 @@ class Toolbelt extends React.Component {
 
   render() {
     let skillWidth = 110
-    let margin = 80
+    let margin = 120
     let maxSkillsInOneList = Math.floor(((this.state.windowWidth - (margin * 2)) / skillWidth))
 
     const cutoffpoint = 641
@@ -103,6 +115,7 @@ class Toolbelt extends React.Component {
 
     return (
       <section className="toolbelt">
+        <Element name="toolbelt"/>
         <h2 className="title">My Toolbelt</h2>
         <h3 className="subtitle">These are some of the tools I use to build websites</h3>
         <div className="skills-container">

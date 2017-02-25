@@ -15,12 +15,18 @@
     background-repeat: no-repeat;
     .right {
       width: 50%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding-left: 64px;
       box-sizing: border-box;
       padding-right: 32px;
+      position: relative;
+      .element {
+        position: absolute;
+        top: 0;
+      }
       .project-title {
         font-weight: bold;
         color: #fff;
@@ -94,6 +100,7 @@
         left: 50%;
         transform: translate(-50%);
         width: 100%;
+        height: auto;
         background: none !important;
         flex-direction: column;
         align-items: center;

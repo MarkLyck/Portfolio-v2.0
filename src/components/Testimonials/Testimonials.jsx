@@ -1,6 +1,8 @@
 import React from 'react'
+import $ from 'jquery'
 import Slider from 'react-slick'
 import Quotes from './quotes.svg'
+import {Element} from 'react-scroll'
 import './testimonials.css'
 import Katy from './images/Katy.jpg'
 import Carey from './images/Carey.jpg'
@@ -16,6 +18,21 @@ class Testimonials extends React.Component {
     this.state = { slide: 0 }
   }
 
+  componentDidMount() {
+    const project1 = $('.testimonials').offset().top;
+    const screen_height = $(window).height();
+    const activation_offset = 0.5;
+    const activation_point1 = project1 - (screen_height * activation_offset);
+
+    $(window).on('scroll', () => {
+        const y_scroll_pos = window.pageYOffset;
+
+        const project1_in_view = y_scroll_pos > activation_point1 && y_scroll_pos - screen_height/1.5 < activation_point1;
+
+        if (project1_in_view) { this.props.setPage(4) }
+    })
+  }
+
   goToSlide(slide) {
     this.refs.slider.slickGoTo(slide)
     this.setState({ slide: slide })
@@ -29,12 +46,14 @@ class Testimonials extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      swipeToSlide: false,
+      swipeToSlide: true,
       swipe: false,
       touchMove: false,
+      fade: true
     }
     return (
       <div className="testimonials">
+        <Element name="testimonials"/>
         <img className="quote" src={Quotes} alt="quote"/>
         <Slider {...sliderSettings} ref="slider">
           <div className="slide">

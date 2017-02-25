@@ -5,10 +5,8 @@ import logo from '../../../public/images/logo.svg'
 import 'particles.js'
 import './hero.css'
 import '../../libraries/typed.js'
-import Scroll from 'react-scroll'
+import { Element, Link } from 'react-scroll'
 import particleConfig from './particles.json'
-
-let Link = Scroll.Link
 
 class Hero extends React.Component {
   componentDidMount() {
@@ -24,11 +22,19 @@ class Hero extends React.Component {
         backDelay: 1500,
         backSpeed: 0,
     })
+    const screen_height = $(window).height()
+    $(window).on('scroll', () => {
+        const y_scroll_pos = window.pageYOffset
+        if (y_scroll_pos < 100) {
+          this.props.setPage(0)
+        }
+    })
   }
 
   render() {
     return (
       <div className="hero">
+        <Element name="hero"/>
           <img className="logo" src={logo} alt="logo"/>
           <div className="content">
             <h1 className="title">Hi! <span className="thin">I'm</span> Mark. <span className="thin">I design & build</span></h1>
