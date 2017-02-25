@@ -1,0 +1,109 @@
+@import "../../index.css";
+
+.projects {
+  padding: 0;
+  margin: 0;
+  .project {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    .right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 64px;
+      box-sizing: border-box;
+      padding-right: 32px;
+      .project-title {
+        font-weight: bold;
+        color: #fff;
+        font-size: 3rem;
+      }
+      .project-position {
+        color: #fff;
+        font-weight: 100;
+        font-size: 1.25rem;
+        letter-spacing: 3px;
+        margin: 8px 0;
+        border: none;
+        clear: both;
+        color: inherit;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .divider {
+        background: $primary-color;
+        height: 1px;
+        width: 80px;
+        margin: 16px 0;
+      }
+      .description {
+        color: #fff;
+        width: 100%;
+        max-width: 380px;
+        margin-right: 32px;
+      }
+      .view-project {
+        border-radius: 40px;
+        font-weight: 100;
+        float: left;
+        font-size: 0.9em;
+        letter-spacing: 3px;
+        display: table;
+        padding: 0.8em 1.8em;
+        border: none;
+        clear: both;
+        margin: 1.8em 0;
+        color: inherit;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #fff;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+        transition: transform 0.3s;
+        &:hover {
+          transform: translateX(-4px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .projects {
+    .project {
+      background-attachment: scroll!important;
+      background-size: 75%!important;
+      background-position: center 20%!important;
+      position: relative;
+      .right {
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        background: none !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+        .project-position { display: none }
+        .divider { display: none }
+        .description { display: none }
+      }
+    }
+  }
+}

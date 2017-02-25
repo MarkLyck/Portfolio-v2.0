@@ -1,19 +1,16 @@
 {
-  "main.css": "static/css/main.b61173d4.css",
-  "main.css.map": "static/css/main.b61173d4.css.map",
-  "main.js": "static/js/main.67ba2427.js",
-  "main.js.map": "static/js/main.67ba2427.js.map",
-  "static/media/Aimi.png": "static/media/Aimi.4beb5065.png",
+  "main.css": "static/css/main.9ab4a216.css",
+  "main.css.map": "static/css/main.9ab4a216.css.map",
+  "main.js": "static/js/main.e13671c1.js",
+  "main.js.map": "static/js/main.e13671c1.js.map",
   "static/media/Background.jpg": "static/media/Background.22966357.jpg",
-  "static/media/BtB_Mockup.png": "static/media/BtB_Mockup.20ecd3f7.png",
+  "static/media/BringTheBand.png": "static/media/BringTheBand.1f96abd4.png",
   "static/media/Carey.jpg": "static/media/Carey.506a0b9d.jpg",
-  "static/media/FS_Mockup.png": "static/media/FS_Mockup.ad430fbf.png",
+  "static/media/FormulaStocks.png": "static/media/FormulaStocks.3561d1f1.png",
   "static/media/Katy.jpg": "static/media/Katy.ae4fc4a5.jpg",
-  "static/media/OpenBMC_Mockup.png": "static/media/OpenBMC_Mockup.dad0b19d.png",
-  "static/media/Stocks.png": "static/media/Stocks.d341b97f.png",
-  "static/media/Tether_Mockup.png": "static/media/Tether_Mockup.038c2e8e.png",
+  "static/media/Tether.png": "static/media/Tether.ac722aea.png",
   "static/media/Thomas.jpg": "static/media/Thomas.ad6745e5.jpg",
   "static/media/close.svg": "static/media/close.924da929.svg",
-  "static/media/iot.png": "static/media/iot.4d9f1f37.png",
-  "static/media/logo.svg": "static/media/logo.2b694f42.svg"
+  "static/media/logo.svg": "static/media/logo.2b694f42.svg",
+  "static/media/quotes.svg": "static/media/quotes.d155f414.svg"
 }

@@ -30,20 +30,21 @@ class Hero extends React.Component {
     return (
       <div className="hero">
           <img className="logo" src={logo} alt="logo"/>
-          <h1 className="title">Hi! <span className="thin">I'm</span> Mark. <span className="thin">I design & build</span></h1>
-          <div className="typed">
-            <h1 id="build"></h1>
-            <div id="builds">
-              <h1>web applications.</h1>
-              <h1>landing pages.</h1>
-              <h1>user interfaces.</h1>
-              <h1>corporate websites.</h1>
-              <h1>your project!</h1>
+          <div className="content">
+            <h1 className="title">Hi! <span className="thin">I'm</span> Mark. <span className="thin">I design & build</span></h1>
+            <div className="typed">
+              <h1 id="build"></h1>
+              <div id="builds">
+                <h1>web applications.</h1>
+                <h1>landing pages.</h1>
+                <h1>user interfaces.</h1>
+                <h1>corporate websites.</h1>
+                <h1>your project!</h1>
+              </div>
             </div>
           </div>
-          <Link to="letsWorkTogether" className="CTA" smooth={true} offset={-80}>Yes, I'm available for hire</Link>
-          <Link to="myExpertise" className="learn-more" smooth={true} offset={-80}>
-            <p>Learn more about what I do</p>
+          <Link to="projects" className="learn-more" smooth={true} offset={0}>
+            <p>See my latest projects</p>
             <i className="fa fa-chevron-down" aria-hidden="true"></i>
           </Link>
           <div id="particles-js"></div>
