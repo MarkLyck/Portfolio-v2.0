@@ -29,7 +29,7 @@ class Toolbelt extends React.Component {
     $(window).on('scroll', () => {
         const y_scroll_pos = window.pageYOffset;
         const project1_in_view = y_scroll_pos > activation_point1 && y_scroll_pos - screen_height/1.5 < activation_point1;
-        if (project1_in_view) { this.props.setPage(5) }
+        if (project1_in_view) { this.props.setPage(6) }
     })
   }
 

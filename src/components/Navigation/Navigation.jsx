@@ -10,9 +10,10 @@ class Navigation extends React.Component {
         <Link className={ this.props.page === 1 ? "dot current" : "dot" } smooth={true} to="project-1" offset={0}/>
         <Link className={ this.props.page === 2 ? "dot current" : "dot" } smooth={true} to="project-2" offset={0}/>
         <Link className={ this.props.page === 3 ? "dot current" : "dot" } smooth={true} to="project-3" offset={0}/>
-        <Link className={ this.props.page === 4 ? "dot current" : "dot" } smooth={true} to="testimonials" offset={0}/>
-        <Link className={ this.props.page === 5 ? "dot current" : "dot" } smooth={true} to="toolbelt" offset={-80}/>
-        <Link className={ this.props.page === 6 ? "dot current" : "dot" } smooth={true} to="contact" offset={-80}/>
+        <Link className={ this.props.page === 4 ? "dot current" : "dot" } smooth={true} to="project-4" offset={0}/>
+        <Link className={ this.props.page === 5 ? "dot current" : "dot" } smooth={true} to="testimonials" offset={0}/>
+        <Link className={ this.props.page === 6 ? "dot current" : "dot" } smooth={true} to="toolbelt" offset={-80}/>
+        <Link className={ this.props.page === 7 ? "dot current" : "dot" } smooth={true} to="contact" offset={-80}/>
       </ul>
     )
   }

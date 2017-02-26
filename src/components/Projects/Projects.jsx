@@ -6,17 +6,20 @@ import './projects.css'
 import FS from './images/FormulaStocks.png'
 import BringTheBand from './images/BringTheBand.png'
 import Tether from './images/Tether.png'
+import OpenBMC from './images/OpenBMC.png'
 
 class Projects extends React.Component {
   componentDidMount() {
     const project1 = $('.project-1').offset().top;
     const project2 = $('.project-2').offset().top;
     const project3 = $('.project-3').offset().top;
+    const project4 = $('.project-4').offset().top;
     const screen_height = $(window).height();
     const activation_offset = 0.4;
     const activation_point1 = project1 - (screen_height * activation_offset);
     const activation_point2 = project2 - (screen_height * activation_offset);
     const activation_point3 = project3 - (screen_height * activation_offset);
+    const activation_point4 = project4 - (screen_height * activation_offset);
 
     $(window).on('scroll', () => {
         const y_scroll_pos = window.pageYOffset;
@@ -24,10 +27,12 @@ class Projects extends React.Component {
         const project1_in_view = y_scroll_pos > activation_point1 && y_scroll_pos - screen_height/1.5 < activation_point1;
         const project2_in_view = y_scroll_pos > activation_point2 && y_scroll_pos - screen_height/1.5 < activation_point2;
         const project3_in_view = y_scroll_pos > activation_point3 && y_scroll_pos - screen_height/1.5 < activation_point3;
+        const project4_in_view = y_scroll_pos > activation_point4 && y_scroll_pos - screen_height/1.5 < activation_point4;
 
         if (project1_in_view) { this.props.setPage(1) }
         if (project2_in_view) { this.props.setPage(2) }
         if (project3_in_view) { this.props.setPage(3) }
+        if (project4_in_view) { this.props.setPage(4) }
     })
   }
   render() {
@@ -53,7 +58,7 @@ class Projects extends React.Component {
           <div className="divider" style={{ background: '#1DBB86' }}/>
           <p className="description">
             Bring the Band, allows users to vote on their favorite bands to attend a festival. They can purchase
-            tickets to the festival, through secure credit card transactions. Listen to music and more.
+            tickets to the festival, through secure credit card transactions. Listen to music using the Spotify API and more.
           </p>
           <a className="view-project" href="https://marklyck.github.io/Bring-the-Band">View project</a>
         </Project>
@@ -67,6 +72,16 @@ class Projects extends React.Component {
             campus, and clears the way for organizations to easily manage their events, transactions and members.
           </p>
           <a className="view-project" href="https://tether.college">View project</a>
+        </Project>
+        <Project mockup={OpenBMC} color="#131e33" color2="rgba(41, 54, 80, 0.75)">
+          <Element className="element project-4" name="project-4"/>
+          <h2 className="project-title">IBM - OpenBMC</h2>
+          <h3 className="project-position" style={{ color: '#4EA6E3' }}>Designer & Co-developer</h3>
+          <div className="divider" style={{ background: '#4EA6E3' }}/>
+          <p className="description">
+            A collaborative project for IBM, built with Electron. OpenBMC makes it easy for their server administrators to
+            discover endpoints, run methods, see what software versions they are on and update/restart systems.
+          </p>
         </Project>
       </div>
     )

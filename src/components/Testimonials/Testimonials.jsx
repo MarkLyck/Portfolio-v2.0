@@ -29,7 +29,7 @@ class Testimonials extends React.Component {
 
         const project1_in_view = y_scroll_pos > activation_point1 && y_scroll_pos - screen_height/1.5 < activation_point1;
 
-        if (project1_in_view) { this.props.setPage(4) }
+        if (project1_in_view) { this.props.setPage(5) }
     })
   }
 
