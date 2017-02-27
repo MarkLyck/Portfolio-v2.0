@@ -45,7 +45,7 @@ class Hero extends React.Component {
                 <h1>landing pages.</h1>
                 <h1>user interfaces.</h1>
                 <h1>corporate websites.</h1>
-                <h1>your project!</h1>
+                <h1>websites people love using!</h1>
               </div>
             </div>
           </div>

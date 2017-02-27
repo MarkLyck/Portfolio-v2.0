@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (
       <footer>
         <img src={logo} alt="logo" className="logo"/>
-        <h3 className="copyright">Handmade by me © 2016</h3>
+        <h3 className="copyright">Handmade by me © 2017</h3>
         <ul className="footer-links">
           <a className="footer-link" href="mailto:hello@markdid.it" target="_blank"><i className="fa fa-envelope" aria-hidden="true"></i></a>
           <a className="footer-link" href="https://twitter.com/marklyck" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
