@@ -73,11 +73,11 @@ class Projects extends React.Component {
           </p>
           <a className="view-project" href="https://tether.college">View project</a>
         </Project>
-        <Project mockup={OpenBMC} color="#131e33" color2="rgba(41, 54, 80, 0.75)">
+        <Project mockup={OpenBMC} color="#0e3c57" color2="rgba(17, 76, 111, 0.75)">
           <Element className="element project-4" name="project-4"/>
           <h2 className="project-title">IBM - OpenBMC</h2>
-          <h3 className="project-position" style={{ color: '#4EA6E3' }}>Designer & Co-developer</h3>
-          <div className="divider" style={{ background: '#4EA6E3' }}/>
+          <h3 className="project-position" style={{ color: '#fff' }}>Designer & Co-developer</h3>
+          <div className="divider" style={{ background: '#fff' }}/>
           <p className="description">
             A collaborative project for IBM, built with Electron. OpenBMC makes it easy for their server administrators to
             discover endpoints, run methods, see what software versions they are on and update/restart systems.
