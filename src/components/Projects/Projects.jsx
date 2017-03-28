@@ -49,7 +49,7 @@ class Projects extends React.Component {
             proprietary investment technology, to beat the stock market >90% of the time for long term growth and
             profitability.
           </p>
-          <a className="view-project" href="https://formulastocks.com">View project</a>
+          <a className="view-project" href="https://formulastocks.com" target="_blank">View project</a>
         </Project>
         <Project mockup={BringTheBand} color="#132B33" color2="rgba(28, 63, 75,0.75)">
           <Element className="element project-2" name="project-2"/>
@@ -60,7 +60,7 @@ class Projects extends React.Component {
             Bring the Band, allows users to vote on their favorite bands to attend a festival. They can purchase
             tickets to the festival, through secure credit card transactions. Listen to music using the Spotify API and more.
           </p>
-          <a className="view-project" href="https://marklyck.github.io/Bring-the-Band">View project</a>
+          <a className="view-project" href="https://marklyck.github.io/Bring-the-Band" target="_blank">View project</a>
         </Project>
         <Project mockup={Tether} color="#2D353F" color2="rgba(57, 70, 85,0.75)">
           <Element className="element project-3" name="project-3"/>
@@ -71,7 +71,7 @@ class Projects extends React.Component {
             Tether is a group discovery and management platform. Connecting students to organizations on their
             campus, and clears the way for organizations to easily manage their events, transactions and members.
           </p>
-          <a className="view-project" href="https://tether.college">View project</a>
+          <a className="view-project" href="https://tether.college" target="_blank">View project</a>
         </Project>
         <Project mockup={OpenBMC} color="#0e3c57" color2="rgba(17, 76, 111, 0.75)">
           <Element className="element project-4" name="project-4"/>

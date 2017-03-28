@@ -4,6 +4,8 @@ footer {
   background: url('../../../public/images/Background.jpg');
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;

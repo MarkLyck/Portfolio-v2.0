@@ -43,7 +43,7 @@ class Toolbelt extends React.Component {
 
   render() {
     let skillWidth = 110
-    let margin = 120
+    let margin = 180
     let maxSkillsInOneList = Math.floor(((this.state.windowWidth - (margin * 2)) / skillWidth))
 
     const cutoffpoint = 641

@@ -15,12 +15,16 @@
   background-repeat: no-repeat;
   position: relative;
   .logo {
+    position: absolute;
+    left: 50%;
+    top: 80px;
     margin-top: 80px;
     margin-bottom: 100px;
+    transform: translateX(-50%);
     transition: transform 0.5s;
     z-index: 1;
     &:hover {
-      transform: scale(1.1);
+      transform: translateX(-50%) scale(1.1);
     }
   }
   .content {
@@ -72,6 +76,8 @@
   .learn-more {
     position: absolute;
     bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
