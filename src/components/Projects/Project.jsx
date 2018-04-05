@@ -7,9 +7,7 @@ class Project extends React.Component {
         backgroundColor: this.props.color,
         backgroundImage: `url(${this.props.mockup})`
       }}>
-        <div className="right" style={{
-          backgroundColor: this.props.color2,
-        }}>
+        <div className="right" style={{ backgroundColor: this.props.color2 }}>
           {this.props.children}
         </div>
       </div>

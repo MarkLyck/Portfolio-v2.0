@@ -150,3 +150,20 @@
     }
   }
 }
+
+@media (max-height: 600px) {
+  .hero {
+    .logo {
+      top: 0px;
+    }
+  }
+}
+
+@media (max-height: 450px) {
+  .hero {
+    .logo {
+      top: 0px;
+      margin-top: 24px;
+    }
+  }
+}
